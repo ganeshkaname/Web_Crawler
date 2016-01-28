@@ -12,8 +12,8 @@ def searchUrl(url = "http://www.google.co.in", depth = 2):
 	if depth == 0 :
 		return
 	for tag in soup.find_all('a', href=True):
-		if ( url + tag['href'] ) not in processed:
-			tag['href'] = url + tag['href']
+		if ( tag['href'] ) not in processed:
+			# tag['href'] = url + tag['href']
 			processed.append(tag['href'])
 			searchUrl(tag['href'],depth - 1)
 
