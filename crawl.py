@@ -22,7 +22,7 @@ def main():
 		print "Give URL and depth"
 		sys.exit(-1)
 	processed.append(sys.argv[1])
-	searchUrl(sys.argv[1],sys.argv[2])
+	searchUrl(sys.argv[1],int(sys.argv[2]))
 	for a in processed:
 		print a
 
